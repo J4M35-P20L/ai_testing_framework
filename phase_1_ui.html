@@ -1,0 +1,324 @@
+<!DOCTYPE html><html lang="en-us" style="" class=" js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers no-applicationcache svg inlinesvg smil svgclippaths"><head><style>@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta http-equiv="refresh" content="3480">
+    <meta property="pagename" value="Login">
+    <title> Login - SiteLink myHub</title>
+    <link automation_id="lnk_sharedHeadFavicon" href="/Content/images/favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <link href="/Content/themes/base/jqueryui?v=QbVd9a0rglhTQZJWhACX94q5r0ejjizzqtxlD3z9cBg1" rel="stylesheet">
+
+    <link href="/Content/css?v=frruvIlVRIz6T9ytvdvOyJyCQdKY-Ch17A44mWERxPU1" rel="stylesheet">
+
+    <script src="/bundles/modernizr?v=inCVuEFe6J4Q07A0AcRsbJic_UE5MwpRMNGcOtk94TE1"></script>
+
+    <link href="/Content/notifications?v=z63-j6DLJjjDpQ-N3EmCcDkYMgW3Qnra3KjulsU63SM1" rel="stylesheet">
+
+    <link href="/Content/slidemenu?v=cfoboqPY4Lv0wASWsWo54K-F6IVIplKYNRR1eVNEy401" rel="stylesheet">
+
+    <script src="/bundles/jquery?v=9wvOxtkXpEnB_jAupp2bGaV9tKCbYcd_nQKqNkobFAc1"></script>
+
+    <script src="/bundles/moment?v=IcaULHl1BDEVe2XFTHz-gOl7ybLTruRw0C7xuz2GOTk1"></script>
+
+    <script src="/bundles/jqueryval?v=0wMHyUjs_jmEd_yjoKYn_xQHtAfPPegKEky_Q2LMOvk1"></script>
+
+
+<script src="/dist/angular/bundle.js"></script>
+
+
+    <script src="/bundles/notifications?v=Kpo3O46vZS-cLPQmcUkIn4w6QAtpqkwGRhqt3FhurIg1"></script>
+
+    <script src="/signalr/hubs"></script>
+
+    <script src="/bundles/bootstrap?v=eNlSsgAV38Gskuwh7ea8ijJMa9KH9LIsBOOBLiz7iL01"></script>
+
+    <script src="/bundles/hub?v=JcNzeE1DZOJIRwCbiGCm5uKWmjDcnzbFEc5G1bWh2fQ1"></script>
+
+    <script src="/bundles/slidemenu?v=d59fKPOZ6_DzK6o6IHdr8Hxlfg9Mn0pR1H_ha1T6epY1"></script>
+
+</head>
+<body class="slBg">
+    
+
+    
+    
+    
+    
+    
+<script defer="" src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon="{&quot;rayId&quot;:&quot;954a0abbba02484d&quot;,&quot;version&quot;:&quot;2025.6.2&quot;,&quot;serverTiming&quot;:{&quot;name&quot;:{&quot;cfExtPri&quot;:true,&quot;cfEdge&quot;:true,&quot;cfOrigin&quot;:true,&quot;cfL4&quot;:true,&quot;cfSpeedBrain&quot;:true,&quot;cfCacheStatus&quot;:true}},&quot;token&quot;:&quot;b9baefdb3a4e479f96a35a86c2fd9a12&quot;,&quot;b&quot;:1}" crossorigin="anonymous"></script>
+
+
+
+    
+
+
+
+
+
+
+
+<div style="position: absolute; top: 0;right: 0;">
+    
+</div>
+
+<div automation_id="div_sharedHeaderLayoutSessionTimeout" id="divSessionTimeout" class="modal fade" style="display: none;" data-backdrop="static">
+    <div class="modal-dialog" style="width: 20%; min-width: 300px;">
+        <div class="modal-content" style="overflow-x: hidden;">
+            <div class="modal-body">Your session is about to expire. Click Continue to extend your session.</div>
+            <div class="modal-footer">
+                <button automation_id="btn_sharedHeaderLayoutSessionTimeoutContinue" type="button" class="btn btn-primary" onclick="$('#divSessionTimeout').modal('hide'); $('body').unbind('keypress'); startTimer(); return false;">Continue</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<!--div class="slGradientLeftNav">
+
+    <a href="/" class="no-hover">
+        <img id="imgLogo" alt="" src="/Content/images/Storable_SiteLink_SiteLinkLogo_White_2025.png" style="margin:12px;">
+    </a>
+</div-->
+
+<section automation_id="div_loginMainContainer" class="container-fluid" id="loginform">
+    <h1 class="text-center text-primary slWelcome">
+        <img src="/Content/images/Storable_SiteLink_SiteLinkLogo_Blue_2025.png" height="50"><br>
+        SiteLink myHub
+    </h1>
+    <h3 class="text-center text-primary">Smart Management Software for Self-Storage</h3>
+    <h4 class="text-center">Visit the <a target="_blank" href="https://www.sitelink.com/products/web-edition/sitelink-myhub">SiteLink myHub information page </a> to learn more. For a Demo login, <a target="_blank" href="https://www.sitelink.com/contact-us">contact Sales.</a></h4>
+    <br>
+    <div class="row login-container">
+
+        <div automation_id="div_clientLoginContainer" class="col-xs-12 col-sm-6 col-md-5 col-md-offset-1 slLoginPanel ">
+            
+
+<form action="/Account/ClientLogin?ReturnUrl=%2F" method="post" novalidate="novalidate">    <div automation_id="div_clientLoginPanel" class="panel panel-primary">
+        <div class="panel-heading">
+            <h3 class="text-center">SiteLink Web Edition</h3>
+        </div>
+        <div class="panel-body">
+            <input name="__RequestVerificationToken" type="hidden" value="7sVLVNWMRn2aWPjM1A4aQa2tOncdNvwiVcNG_STw_zLlJUpkIQdTv_Q87AlMn-RJU4PzOG_AcPp7Nsuvf0bBK1UbZ_HLTmJclhNXo0YVcTk1">
+            <input automation_id="hdn_clientLoginGmtOffset" type="hidden" id="Client_GmtOffset" name="Client.GmtOffset" value="240">
+            <script type="text/javascript">
+                var d = new Date();
+                document.getElementById("Client_GmtOffset").setAttribute('value', d.getTimezoneOffset());
+            </script>
+
+            <div class="form-horizontal">
+                <div automation_id="div_clientLoginValidationMessageContainer" class="validationMessageContainer">
+                    <span automation_id="txt_clientLoginValidationMessage" class="field-validation-valid" data-valmsg-for="Client" data-valmsg-replace="true" style="color: red;"></span>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-md-4" for="Client_CorpCode">Corp Code</label>
+                    <div class="col-md-7">
+                        <input value="SLQA" automation_id="txt_clientLoginCorpCode" class="form-control uppercase allow-enter" data-val="true" data-val-regex="Invalid Character" data-val-regex-pattern="^\w+$" data-val-required="The Corp Code field is required." id="Client_CorpCode" name="Client.CorpCode" type="text">
+                        <span automation_id="txt_clientLoginCorpCodeValidationMessage" class="field-validation-valid" data-valmsg-for="Client.CorpCode" data-valmsg-replace="true" style="color: red;"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-md-4" for="Client_LocationCode">Location Code</label>
+                    <div class="col-md-7">
+                        <input value="TEST7" automation_id="txt_clientLoginLocationCode" class="form-control uppercase allow-enter" data-val="true" data-val-regex="Invalid Character" data-val-regex-pattern="^\w+$" data-val-required="The Location Code field is required." id="Client_LocationCode" name="Client.LocationCode" type="text">
+                        <span automation_id="txt_clientLoginLocationCodeValidationMessage" class="field-validation-valid" data-valmsg-for="Client.LocationCode" data-valmsg-replace="true" style="color: red;"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-md-4" for="Client_UserName">User Name</label>
+                    <div class="col-md-7">
+                        <input value="AUTO" automation_id="txt_clientLoginUserName" class="form-control uppercase allow-enter" data-val="true" data-val-required="The User Name field is required." id="Client_UserName" name="Client.UserName" type="text">
+                        <span automation_id="txt_clientLoginUserNameValidationMessage" class="field-validation-valid" data-valmsg-for="Client.UserName" data-valmsg-replace="true" style="color: red;"></span>
+                    </div>
+                </div>
+                <div class="form-group" style="display: block;">
+                    <label class="control-label col-md-4" for="Client_Password">Password</label>
+                    <div class="col-md-7">
+                        <input automation_id="txt_clientLoginPassword" class="input-validation-error form-control" data-val="true" data-val-required="The Password field is required." id="Client_Password" name="Client.Password" type="password">
+                        <span automation_id="txt_clientLoginPasswordValidationMessage" class="field-validation-error" data-valmsg-for="Client.Password" data-valmsg-replace="true" style="color: red;">The Password field is required.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel-footer">
+            <input automation_id="btn_clientLoginSubmit" type="submit" value="Login" class="btn btn-lg btn-block btn-primary">
+        </div>
+    </div>
+</form>
+        </div>
+
+        
+
+            <div automation_id="div_corpLoginContainer" class="col-xs-12 col-sm-6 col-md-5 slLoginPanel">
+                
+<form action="/Account/CorpLogin?ReturnUrl=%2F" method="post" novalidate="novalidate">    <div automation_id="div_corpLoginPanel" class="panel panel-primary">
+        <div class="panel-heading">
+            <h3 class="text-center">Corporate Control Center</h3>
+        </div>
+        <div class="panel-body">
+            <input name="__RequestVerificationToken" type="hidden" value="EAS9gwRtLCKtigcd29Mn5FhHvT1qAp6XsZGSO3KBw2CV69yH_9UNOf_hDodWQSzNiGUVme0DlxqFLOv2yvp5krgZmP8bWQY7StOjNCOVIe01">
+            <input automation_id="hdn_corpLoginGmtOffset" type="hidden" id="Corp_GmtOffset" name="Corp.GmtOffset" value="-4">
+            <script type="text/javascript">
+                var d = new Date();
+                document.getElementById("Corp_GmtOffset").setAttribute('value', -d.getTimezoneOffset() / 60);
+            </script>
+            <div class="form-horizontal">
+                <div automation_id="div_corpLoginValidationMessageContainer" class="validationMessageContainer">
+                    <span automation_id="txt_corpLoginValidationMessage" class="field-validation-valid" data-valmsg-for="Corp" data-valmsg-replace="true" style="color: red;"></span>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-md-4" for="Corp_CorpCode">Corp Code</label>
+                    <div class="col-md-7">
+                        <input value="" automation_id="txt_corpLoginCorpCode" class="form-control uppercase allow-enter" data-val="true" data-val-regex="Invalid Character" data-val-regex-pattern="^\w+$" data-val-required="The Corp Code field is required." id="Corp_CorpCode" name="Corp.CorpCode" type="text">
+                        <span automation_id="txt_corpLoginCorpCodeValidationMessage" class="field-validation-valid" data-valmsg-for="Corp.CorpCode" data-valmsg-replace="true" style="color: red;"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-md-4" for="Corp_UserName">User Name</label>
+                    <div class="col-md-7">
+                        <input value="" automation_id="txt_corpLoginUserName" class="form-control uppercase allow-enter" data-val="true" data-val-required="The User Name field is required." id="Corp_UserName" name="Corp.UserName" type="text">
+                        <span automation_id="txt_corpLoginUserNameValidationMessage" class="field-validation-valid" data-valmsg-for="Corp.UserName" data-valmsg-replace="true" style="color: red;"></span>
+                    </div>
+                </div>
+                <div class="form-group" style="display: none;">
+                    <label class="control-label col-md-4" for="Corp_Password">Password</label>
+                    <div class="col-md-7">
+                        <input automation_id="txt_corpLoginPassword" class="form-control" data-val="true" data-val-required="The Password field is required." id="Corp_Password" name="Corp.Password" type="password">
+                        <span automation_id="txt_corpLoginPasswordValidationMessage" class="field-validation-valid" data-valmsg-for="Corp.Password" data-valmsg-replace="true" style="color: red;"></span>
+                    </div>
+                </div>
+                <div class="form-group" style="visibility:hidden">
+                    <label>&nbsp;</label>
+                    <div class="col-md-7" style="padding-bottom: 8px;">
+                        <text>&nbsp;</text>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel-footer">
+            <input automation_id="btn_corpLoginSubmit" type="submit" value="Login" class="btn btn-block btn-lg btn-primary">
+        </div>
+    </div>
+</form>
+            </div>
+    </div>
+    <div automation_id="div_loadingContainer" id="full-overlay" style="display: none;">
+        <div id="loading-center">
+            <div id="loading-center-absolute">
+                <div class="object" id="object_four"></div>
+                <div class="object" id="object_three"></div>
+                <div class="object" id="object_two"></div>
+                <div class="object" id="object_one" style="display:none;"></div>
+                <img id="imgLogo" alt="" src="/Content/images/Storable_SiteLink_SiteLinkIcon_Spinner_2025.png" class="slLogoLoading">
+            </div>
+        </div>
+    </div>
+</section>
+<script type="text/javascript">
+    window.onbeforeunload = function()
+    {
+        ShowLoader();
+    }
+
+    $(document).ready(function()
+    {
+        checkOldCookie();
+    });
+
+    function ShowLoader()
+    {
+        $('#full-overlay').show();
+
+    }
+
+    function checkOldCookie()
+    {
+        if (!getCookie('HubClientLogin'))
+        {
+            var oldCookie = getCookie('ClientLogin');
+            if (oldCookie)
+            {
+                $('#Client_CorpCode').val(getKeyValue(oldCookie, 'CorpCode'));
+                $('#Client_LocationCode').val(getKeyValue(oldCookie, 'LocationCode'));
+                $('#Client_UserName').val(getKeyValue(oldCookie, 'UserName'));
+            }
+
+        }
+
+        if (!getCookie('HubCorpLogin'))
+        {
+            var oldCookie = getCookie('CorpLogin');
+            if (oldCookie)
+            {
+                $('#Corp_CorpCode').val(getKeyValue(oldCookie, 'CorpCode'));
+                $('#Corp_UserName').val(getKeyValue(oldCookie, 'UserName'));
+            }
+        }
+    }
+
+    function getCookie(cname)
+    {
+        var name = cname + "=";
+        var decodedCookie = decodeURIComponent(document.cookie);
+        var ca = decodedCookie.split(';');
+        for (var i = 0; i < ca.length; i++)
+        {
+            var c = ca[i];
+            while (c.charAt(0) == ' ')
+            {
+                c = c.substring(1);
+            }
+            if (c.indexOf(name) == 0)
+            {
+                return c.substring(name.length, c.length);
+            }
+        }
+        return "";
+    }
+
+    function setCookie(cname, cvalue, days, domain)
+    {
+        var d = new Date();
+        d.setDate(d.getDate() + days);
+        var expires = "expires=" + d.toUTCString();
+        var cookieString = cname + "=" + cvalue + ";" + "SameSite=None; Secure;" + expires + ";path=/";
+        if (domain)
+            cookieString += ';domain=' + domain;
+        document.cookie = cookieString;
+    }
+
+    function getKeyValue(cookieString, Key)
+    {
+        var split = cookieString.split('&');
+        for (var i = 0; i < split.length ; i++)
+        {
+            var keyValuePair = split[i].split('=');
+            if (keyValuePair.length == 2 && keyValuePair[0] == Key)
+            {
+                return keyValuePair[1];
+            }
+        }
+        return "";
+    }
+</script>
+<footer>
+    <div class="content-wrapper">
+        <div id="divFooter" class="full-width text-center">
+            <p>
+                © 2025 SiteLink Software, LLC. &nbsp;|&nbsp;
+                <a automation_id="lnk_sharedHeaderLayoutTermsAndConditions" href="/Content/Terms"><strong>Terms and Conditions</strong></a> &nbsp;|&nbsp;<a automation_id="lnk_sharedHeaderLayoutPrivacyPolicy" href="/Content/Privacy"><strong>Privacy Policy</strong></a>
+            </p>
+            <div><a href="https://www.storable.com/" target="_blank"><img src="/Content/images/StorableSoftware.png" height="15"></a></div>
+        </div>
+    </div>
+</footer>
+
+<div id="full-overlay" style="display: none;">
+    
+</div>
+
+</body><!-- link automation_id="lnk_loginStylesheet" href="~/Content/viewcss/login.css" rel="stylesheet" / --></html>

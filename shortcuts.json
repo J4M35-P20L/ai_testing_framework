@@ -1,0 +1,6 @@
+{
+  "login to myhub": {
+    "feature_path": "features/login.feature",
+    "scenario": "Valid login"
+  }
+}

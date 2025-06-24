@@ -1,0 +1,9 @@
+{
+  "app_url": "https://practicetestautomation.com/practice-test-login/",
+  "field_values": {
+    "CorpCode": "SLQA",
+    "LocationCode": "Test7",
+    "UserName": "AUTO"
+  },
+  "final_goal": "Click on the Login button."
+}
