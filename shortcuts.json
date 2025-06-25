@@ -2,5 +2,9 @@
   "login to myhub": {
     "feature_path": "features/login.feature",
     "scenario": "Valid login"
+  },
+  "login to gmail": {
+    "feature_path": "features/gmail.feature",
+    "scenario": "Gmail Valid login"
   }
 }

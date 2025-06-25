@@ -17,7 +17,7 @@ def run_agent(field_values, additional_goal):
         browser = p.chromium.launch(headless=False)
         page = browser.new_page()
         page.goto(os.getenv("TEST_URL"))
-        page.wait_for_timeout(3000)
+        page.wait_for_timeout(500)
 
         html = page.content()
         actions = get_next_actions(html, field_values, additional_goal)
@@ -29,5 +29,5 @@ def run_agent(field_values, additional_goal):
         # ✅ Just call the shared executor here
         perform_actions(page, actions)
 
-        page.wait_for_timeout(3000)
+        page.wait_for_timeout(500)
         browser.close()

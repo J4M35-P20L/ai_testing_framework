@@ -1,6 +1,7 @@
 Scenario: Valid login
-Enter Corp Code as SLQA
-Enter Location Code as TEST7
-Enter Username as AUTO
-Click on Login button
-Enter Password as AUTO
+Given user Enter Corp Code as SLQA
+When user Enter Location Code as TEST7
+And the user enters username as AUTO
+And the user clicks on the login button
+And the user enters password as AUTO
+Then the user clicks on the login button
